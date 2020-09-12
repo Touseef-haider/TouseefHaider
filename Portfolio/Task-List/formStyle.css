@@ -1,0 +1,63 @@
+*{ 
+    font-family: cursive;
+    font-size: 15px;           
+}
+.Main{  
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: 2px 2px 5px 5px #333;
+    justify-items: center;
+    background-color: lightgrey;
+    padding: 20px;
+}
+#input{
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    align-self: center;
+}
+#filter{
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    margin: 5px;
+}
+.Container{
+    margin: 5px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+.Container-1{
+    align-self: center;
+}
+button{
+    height: 35px;
+    background-color: grey;
+    border: none;
+    color: white;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: white;
+    color: grey;
+}
+.li{
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+a{
+    margin-left:50px ;
+    text-decoration: none;
+}
+h1{
+    margin: 30px;
+    font-weight: bold;
+    font-size: larger;
+    color: indigo;
+}
+#task-list{ 
+    text-align: center;
+}

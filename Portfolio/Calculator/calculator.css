@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+a{
+    color: grey;
+}
+.Grid{
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+.Calculator{
+    width: 50vh;
+    height: 65vh;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 2px lightblue ;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+}
+.Calculator input{
+    height: 35px;
+    border-radius: 20px;
+    border: 2px solid grey;
+    text-align: center;
+    font-size: larger;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+.general-buttons{
+    color: grey;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    box-shadow: 2px 2px 2px 2px grey;
+}
+.general-buttons:hover{
+    color: white;
+    background-color: grey;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    box-shadow: 2px 2px 2px 2px grey;
+    cursor: pointer;
+}
+.Numbers-And-Buttons{
+    display: flex;
+    justify-content: center;
+}
+.Numbers-And-Buttons1{
+    display: flex;
+    justify-content: center;
+}
+.Numbers-And-Buttons2{
+    display: flex;
+    justify-content: center;
+}
+.Numbers-And-Buttons3{
+    display: flex;
+    justify-content: center;
+}
+.special{
+    font-size: larger;
+    font-weight: bolder;
+    color: darkorange;
+}
