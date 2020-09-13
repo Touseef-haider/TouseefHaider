@@ -2,7 +2,6 @@ let min=1,
     max=10,
     Left=3;
 let Win=Math.floor(Math.random()*(max-min+1)+min);
-
     let Minimum = document.querySelector('.Minimum');
     let Maximum = document.querySelector('.Maximum');
     Minimum.innerText = min;
@@ -26,13 +25,17 @@ document.querySelector('#btn').addEventListener('click',()=>{
             guess.style.borderColor='red';   
             playAgain()        
         }else{
-            message.textContent = `No ${guess.value} is not that number,You have ${Left=Left-1} turns left`;
+            `${guess.value>10? `${alert("Please Enter the number between 1 and 10")}`:`${message.textContent=`No ${guess.value} is not that number.You have ${Left=Left-1} turns left`}`}`;
+            setTimeout(()=>{
+                message.textContent = "";
+            },1000)
             message.style.color = 'red';
             guess.style.borderColor='red';
             guess.value = ''
             guess.focus();
         }
     }
+    
 })
 function playAgain(){
     let message =document.querySelector('.msg');
@@ -42,6 +45,7 @@ function playAgain(){
     button.appendChild(document.createTextNode('Play Again'));
     button.addEventListener('click',Refresh);
     Mess.insertBefore(button,message); 
+    document.getElementById('btn').style.display="none"
 }
 
 function Refresh(){
