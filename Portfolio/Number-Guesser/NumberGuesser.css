@@ -8,6 +8,20 @@
 body{
     background-color:lightcyan;
 }
+
+.msg{
+    display: none;
+}
+.showLoading{
+    display: none;
+    width: 200px;
+    height: 200px;
+    margin: 10px auto;
+    background-image: url('../images/loading.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .Container{
     margin: 50px;
     display: grid;
