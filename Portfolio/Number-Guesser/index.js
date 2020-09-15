@@ -50,9 +50,6 @@ function Won(showLoading,message,guess) {
         guess.value=''
         playAgain();
     }, 1000);
-    // setTimeout(() => {
-    //     message.textContent = "";
-    // }, 1000);
 }
 function Lost(showLoading,message,guess) {
     let sh = showLoading;
@@ -66,7 +63,7 @@ function Lost(showLoading,message,guess) {
         playAgain();
         setTimeout(() => {
             message.textContent = ""
-        }, 1000);
+        }, 2500);
     }, 1000);
 
 }
@@ -84,7 +81,7 @@ function Load(showLoading,message,guess) {
         
         setTimeout(() => {
             message.textContent = ""
-        }, 1000);
+        }, 2500);
     }, 1000);    
 }
 function playAgain(){
