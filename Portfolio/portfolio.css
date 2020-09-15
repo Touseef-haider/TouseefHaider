@@ -91,28 +91,30 @@ h2,h1{
 }
 /* This is the css for my introduction area */
 .Intro{
+    width: 100%;
+    height: 590px;
     display: flex;
     flex-direction: column;
     background-color:lavender;
     align-items: center;
-    padding-bottom: 25px;
     justify-content: center; 
     text-align: center;
-    overflow: scroll;
 }
-.Intro h1{
-    margin-top: 30px;
-}
+/* This is the css for the image in div */
 .Image{
-    margin-top: 105px;
+    justify-self: flex-start;
     width: 300px;
     height: 300px;
     background-image: url('./images/Touseef.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 20px;
 }
-
+/* this is the css for the heading in Intro div */
+.Intro h1{
+    padding: 20px;
+}
 /* This is the place for the css of the projects */
 .Projects{
     display: flex;
@@ -138,6 +140,12 @@ h2,h1{
     display: flex;
     flex-direction: column;
 }
+.Five-project{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 /* This is very important for every image in this portfolio  */
 img{
     width: 100%;
@@ -185,7 +193,6 @@ img{
 }
 .Text-area{
     padding: 15px;
-    /* width: 100%; */
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -400,11 +407,11 @@ footer .Icons a i:hover{
     }
     .Intro{
         width: 100%;
-        height: 900px;
+        height: 750px;
     }
     /* This is the css for the div with the class of the image  */
     .Image{
-        padding-top: 430px;
+        padding-top: 432px;
         margin-top: 50px;
         width: 100%;
     }
