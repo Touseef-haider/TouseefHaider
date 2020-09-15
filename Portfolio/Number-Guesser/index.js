@@ -65,7 +65,6 @@ function Lost(showLoading,message,guess) {
             message.textContent = ""
         }, 2500);
     }, 1000);
-
 }
 function Load(showLoading,message,guess) {
     let s = showLoading;
@@ -78,7 +77,6 @@ function Load(showLoading,message,guess) {
         guess.focus();
         message.textContent = `No ${g} is not that number.You have ${Left=Left-1} turns left`;
         message.style.color = 'red';
-        
         setTimeout(() => {
             message.textContent = ""
         }, 2500);
