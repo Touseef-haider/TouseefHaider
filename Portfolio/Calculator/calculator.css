@@ -8,14 +8,11 @@ a{
     color: grey;
 }
 .Grid{
-    margin: 30px;
-    display: grid;
+        display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
 }
 .Calculator{
-    width: 50vh;
-    height: 65vh;
     padding: 20px;
     box-shadow: 2px 2px 2px 2px lightblue ;
     display: flex;
