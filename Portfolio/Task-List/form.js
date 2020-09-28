@@ -1,5 +1,7 @@
 // getting unordered list
 let ul = document.querySelector('ul');
+let lengthOfArray;
+let clearbtn = document.querySelector('#btn-clear');
 // getting tasks from local Storage
 document.addEventListener("DOMContentLoaded",()=>{
   let tasks;
@@ -7,7 +9,11 @@ document.addEventListener("DOMContentLoaded",()=>{
     tasks=[];
    }else{
     tasks = JSON.parse(localStorage.getItem('tasks'))
-   }
+        if (tasks.length>0) {
+            clearbtn.style.display = 'block'   
+        }    
+        lengthOfArray = tasks.length;
+    }
    tasks.forEach((task)=>{
        // creating list item
         let li = document.createElement('li');
@@ -36,20 +42,32 @@ document.querySelector('#btn-clear').addEventListener('click',()=>{
     let ul = document.querySelector('ul').innerHTML='';
     // clearing list
     localStorage.clear();
+    clearbtn.style.display= 'none'
 })
 // Adding task function
 document.querySelector('#btn').addEventListener('click',()=>{
     let tasks;
+    clearbtn.style.display= 'block'
     // Getting input as a task
     let input = document.querySelector('#input');
     // value of the input i.e actual task
     let task = input.value;
+    if (task == "") {
+        alert("Enter The Item ");
+        input.focus();
+        return;
+    }
+    lengthOfArray++;
     // creating list item
     let li = document.createElement('li');
     // adding class to the list item
     li.className="li";
+    // create span here 
+    let span = document.createElement('span');
+    // Inserting the text content 
+    span.textContent = task;
     // creating text node in list item
-    li.appendChild(document.createTextNode(input.value));
+    li.appendChild(span);
     // creating anchor tag
     let a = document.createElement('a');
     // adding class to the anchor tag
@@ -80,12 +98,18 @@ document.querySelector('#btn').addEventListener('click',()=>{
 // removing single item from unordered list (function)
 document.querySelector('ul').addEventListener('click',(e)=>{
     // removing single desired item
+    lengthOfArray--;
     e.target.parentElement.remove();
+    console.log(lengthOfArray)
+    if (lengthOfArray===0) {
+        location.reload();
+    }
+    // location.reload();
     let tasks;
     if (localStorage.getItem('tasks')===null) {
-    tasks=[];
+        tasks=[];
     }else{
-    tasks = JSON.parse(localStorage.getItem('tasks'))
+        tasks = JSON.parse(localStorage.getItem('tasks'))
     }
     tasks.forEach((task,index)=>{
         if (e.target.parentElement.firstChild.textContent===task) {
@@ -99,6 +123,9 @@ document.querySelector('ul').addEventListener('click',(e)=>{
 document.querySelector('#filter').addEventListener('keyup',(e)=>{
     // value to be searched in the list
     let text =e.target.value;
+    if (text=="") {
+        location.reload();
+    }
     // getting every list item
     let ul = document.querySelectorAll('ul li');
     // fore each item in the list checking searched value
